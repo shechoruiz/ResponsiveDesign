@@ -7,6 +7,7 @@ body{
     background-color: #1D252C;
     color: white;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     height: 70px;
     align-items: center;
@@ -81,12 +82,9 @@ h6{
 
  .hero{
     height: 300px;
-    /* background-image: url('../images/hero.jpg');
-    background-size: 500px 300px;
-    background-repeat: no-repeat;
-    background-position-x: right; */
     background-color: #1D252C;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
  }
@@ -108,6 +106,7 @@ h6{
      padding: 20px;
      background-color: white;
      display: flex;
+     flex-wrap: wrap;
      align-items: center;
      justify-content: space-between;
  }
@@ -140,7 +139,7 @@ h6{
     font-family: 'Fjalla One', sans-serif;
  }
 
- /* Deficinión de eventos con uso de carts */
+ /* Definición de eventos con uso de carts */
 
  .event-list-title{
      margin-left: 20px;
@@ -194,6 +193,7 @@ h6{
     color: white;
     height: 150px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
@@ -255,6 +255,7 @@ h6{
     background-color: #1D252C;
     color: white;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
  }
@@ -270,11 +271,50 @@ h6{
 /* Definición del wrapper o container */
 
 .container{
-    width: 1000px;
+    max-width: 1000px;
+    /* width: 100%; */
+    flex: 1;
     margin: 0 auto;
     display: inherit;
     justify-content: inherit;
     align-items: inherit;
     height: inherit;
     flex-wrap: inherit;
+}
+
+/* Definición de los media queries */
+
+@media screen and (max-width: 1024px){
+
+}
+
+@media screen and (max-width: 767px){
+    .header{
+        display: block;
+        height: auto;
+    }
+
+    .logo{
+        text-align: center;
+    }
+
+    .header ol{
+        display: initial;
+    }
+    
+    .header ol li{
+        height: 50px;
+    }
+
+    .header a{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+}
+
+@media screen and (max-width: 320px){
+
 }
