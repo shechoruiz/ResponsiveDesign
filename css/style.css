@@ -118,11 +118,16 @@ h6{
  }
 
  .project-details{
-     width: 500px;
+     width: 50%;
  }
 
  .project-imageContainer{
-     width: 500px;
+     width: 50%;
+ }
+
+ .project-imageContainer img{      /*Esto ajusta la imagen para que sea responsive*/
+     max-width: 100%;
+
  }
 
  .project-course,
@@ -146,8 +151,8 @@ h6{
  }
 
  .event{
-     margin: 10px;
-     width: 480px;
+     margin: 1%;
+     width: 48%;
      border-radius: 10px;
      flex-shrink: 0;
      overflow: hidden;
@@ -285,6 +290,9 @@ h6{
 /* Definición de los media queries */
 
 @media screen and (max-width: 1024px){
+    .container{
+        padding: 0 1em;
+    }
 
 }
 
@@ -309,10 +317,85 @@ h6{
     .header a{
         justify-content: center;
     }
+
+    .project{
+        display: block;
+    }
+
+    .project-imageContainer{
+        width: auto;
+        text-align: center;
+    }
+
+    .project-details{
+        width: auto;
+    }
+
+    .project-course, .project-date, .project-url{
+        margin: .3em 0;
+    }
+
+    .project-title{
+        font-size: 1.5em;
+        margin-bottom: .3em;
+    }
+
+    .project-url{
+        font-size: 1.2em;
+    }
+
+    .project-course{
+        font-size: .7em;
+    }
+
+    .project-date{
+        font-size: 1em;
+    }
+
+    .project-description{
+        font-size: .8em;
+    }
+
+    .event{
+        width: auto;
+        flex-shrink: initial;
+    }
+
+    .event img{
+        width: 100%;
+    }
+
+    .event-detail{
+        margin: -2em .5em .5em;
+        padding: 1em;
+    }
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 479px){
+    .project-details{
+        font-size: 12px;
+    }
 
+    .contact{
+        height: auto;
+        padding: 1.5em 0;
+        text-align: center;
+        display: block;
+    }
+
+    .form-email h3{
+        margin-top: 0;
+    }
+
+    .form-email button{
+        margin: 1em auto;
+    }
+
+    .footer{
+        display: block;
+        text-align: center;
+        border: 1px solid transparent;
+    }
 }
 
 @media screen and (max-width: 320px){
